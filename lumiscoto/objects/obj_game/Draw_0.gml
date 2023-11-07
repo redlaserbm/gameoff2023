@@ -7,6 +7,6 @@ draw_text(_zero_x, _zero_y, string(obj_player.move_x));
 draw_text(_zero_x, _zero_y + 32, string(obj_player.colliding));
 draw_text(_zero_x, _zero_y + 64, string(obj_player.air_time));
 draw_text(_zero_x, _zero_y + 96, string(obj_player.movement_mode));
-
+draw_text(_zero_x, _zero_y + 128, string(obj_player.jump_direction));
 
 

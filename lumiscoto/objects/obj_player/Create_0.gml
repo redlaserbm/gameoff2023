@@ -7,7 +7,7 @@ move_decel = 0.2;
 
 move_speed = 3;
 jump_speed = 5;
-walljump_bonus_speed = 2;
+walljump_bonus_speed = 0;
 
 // Influences how fast the player falls.
 grav = 0.45;

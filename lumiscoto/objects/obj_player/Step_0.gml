@@ -57,10 +57,13 @@ if (_jump && air_time < coyote_time && movement_mode == "normal") {
 	jump_stopped = false;
 	
 	// Make the player go up!
-	jump_direction = pi/2;
+	if _ground_collision {
+		jump_direction = pi/2;
+	}
 	
 	// Adjust the player's y_speed
-	move_y = -jump_speed;
+	move_x = move_x + jump_speed*cos(jump_direction)
+	move_y = -jump_speed*sin(jump_direction);
 	
 	// DEBUGGING PURPOSES: Mark the player's current x and y coordinates. 
 	// If the player falls off-screen, we will return them to these coordinates.
@@ -80,9 +83,7 @@ if (_jump && air_time < coyote_time && movement_mode == "normal") {
 	x = x - wallclimb_direction*2;
 	
 	// Make the player jump at an appropriate angle
-	jump_direction = pi/3;
-	
-	move_x = -1*(jump_speed+walljump_bonus_speed)*cos(jump_direction)*wallclimb_direction;
+	move_x = (jump_speed+walljump_bonus_speed)*cos(jump_direction);
 	move_y = -(jump_speed+walljump_bonus_speed)*sin(jump_direction);
 	
 // If the player grabs onto a ledge...
@@ -111,10 +112,12 @@ if (_jump && air_time < coyote_time && movement_mode == "normal") {
 } else if ((_wall_collision_left || _wall_collision_right) && movement_mode == "normal" && !_ground_collision) {
 	movement_mode = "wallclimb";
 	
-	if _wall_collision_left != noone {
-		wallclimb_direction = -1;	
+	if _wall_collision_left != noone {	
+		jump_direction = pi/4;
+		wallclimb_direction = -1;
 	} else {
-		wallclimb_direction = 1;	
+		jump_direction = 3*pi/4;
+		wallclimb_direction = 1;
 	}
 }
 
