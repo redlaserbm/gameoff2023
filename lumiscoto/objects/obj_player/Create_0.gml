@@ -6,6 +6,7 @@ move_accel = 0.4;
 move_decel = 0.2;
 
 move_speed = 3;
+walk_speed = 1.5;
 jump_speed = 5;
 walljump_bonus_speed = 0;
 
@@ -38,6 +39,9 @@ jump_direction = pi/2;
 // Variable to measure whether a jump is active or not
 jump_active = false;
 
+// Variable to determine whether a walk is active or not
+walk_active = false;
+
 // Measures how long the player has spent in the air
 air_time = 0;
 
@@ -61,6 +65,7 @@ up_input = false;
 jump = false;
 hold_space = false;
 jump_release = false;
+walk = false;
 
 // Setup machine state for the player
 state_machine_init();

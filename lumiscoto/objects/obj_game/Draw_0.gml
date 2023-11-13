@@ -11,5 +11,7 @@ draw_text(_zero_x, _zero_y + 96, string(obj_player.state_name));
 draw_text(_zero_x, _zero_y + 128, string(obj_player.jump_direction));
 draw_text(_zero_x, _zero_y + 32*5, string(obj_player.sprite_index));
 draw_text(_zero_x + 64, _zero_y + 32*5, string(obj_player.image_index));
+draw_text(_zero_x, _zero_y + 32*6, string(obj_lumi.jump_active));
+draw_text(_zero_x + 64, _zero_y + 32*6, string(obj_lumi.jump));
 
 

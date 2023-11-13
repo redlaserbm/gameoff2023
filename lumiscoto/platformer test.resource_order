@@ -6,10 +6,14 @@
   ],
   "ResourceOrderSettings": [
     {"name":"ps_grab","order":1,"path":"scripts/ps_grab/ps_grab.yy",},
+    {"name":"spr_player_walk","order":1,"path":"sprites/spr_player_walk/spr_player_walk.yy",},
     {"name":"place_meeting_rounded","order":2,"path":"scripts/place_meeting_rounded/place_meeting_rounded.yy",},
+    {"name":"obj_jump","order":2,"path":"objects/obj_jump/obj_jump.yy",},
+    {"name":"ps_normal_lumi","order":3,"path":"scripts/ps_normal_lumi/ps_normal_lumi.yy",},
     {"name":"state_update","order":7,"path":"scripts/state_update/state_update.yy",},
     {"name":"state_create","order":1,"path":"scripts/state_create/state_create.yy",},
     {"name":"position_meeting_rounded","order":3,"path":"scripts/position_meeting_rounded/position_meeting_rounded.yy",},
+    {"name":"spr_jump","order":1,"path":"sprites/spr_jump/spr_jump.yy",},
     {"name":"state_init","order":3,"path":"scripts/state_init/state_init.yy",},
     {"name":"state_machine_init","order":4,"path":"scripts/state_machine_init/state_machine_init.yy",},
     {"name":"interpolate","order":4,"path":"scripts/interpolate/interpolate.yy",},
@@ -18,6 +22,7 @@
     {"name":"draw_set_text_alignment","order":1,"path":"scripts/draw_set_text_alignment/draw_set_text_alignment.yy",},
     {"name":"state_test","order":8,"path":"scripts/state_test/state_test.yy",},
     {"name":"state_switch","order":5,"path":"scripts/state_switch/state_switch.yy",},
+    {"name":"obj_lumi","order":1,"path":"objects/obj_lumi/obj_lumi.yy",},
     {"name":"ps_normal","order":2,"path":"scripts/ps_normal/ps_normal.yy",},
   ],
 }

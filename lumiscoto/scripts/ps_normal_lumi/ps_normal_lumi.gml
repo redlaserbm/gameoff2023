@@ -1,5 +1,5 @@
 /// @description pb_state_stand()
-function ps_normal() {
+function ps_normal_lumi() {
 	// The "normal" state for the player. Includes support for idling and running.
 	
 	if(state_new)
@@ -24,14 +24,17 @@ function ps_normal() {
 
 	// COMPUTE X-SPEED
 	
-	// If the player holds down the walk key, decrease their max speed
-	// This code ensures that a jump performed while walking cannot go as far!
+	// Unlike with the player, we don't want Lumi to have walk speed jumping at all, because this creates
+	// the risk that she might kill herself while jumping
 	if _ground_collision {
+		on_the_ground = true;
 		if walk {
 			walk_active = true;
 		} else {
 			walk_active = false;
 		}
+	} else {
+		walk_active = false;	
 	}
 	
 	var _max_speed = move_speed;
@@ -87,9 +90,6 @@ function ps_normal() {
 		jump_active = true;
 		move_x = move_x + jump_speed*cos(jump_direction);
 		move_y = -jump_speed*sin(jump_direction);
-		
-		// Spawn a jump block for Lumi to interact with that tells her to START her jump
-		instance_create_layer(x, y, layer_get_id("collisions"), obj_jump);
 	}
 	
 	// Code which handles *continuing* a jump
@@ -98,9 +98,8 @@ function ps_normal() {
 		// Allow the player to defy the effects of gravity for a short while should they continue to hold jump button
 		move_y -= ((30 - air_time)/30)*grav;
 		
-		if (jump_release || air_time > max_jumptime) {
-			jump_active = false;
-			instance_create_layer(x, y, layer_get_id("collisions"), obj_jump);
+		if (!jump || air_time > max_jumptime) {
+			jump_active = false;	
 		}
 	}
 	
@@ -157,34 +156,5 @@ function ps_normal() {
 		}
 	}
 	
-	// Check for conditions which would cause a change of state...
-	
-	if (hold_space && _climb_collision != noone && air_time > 1) {
-		
-		// Which direction will we climb in?
-		if (_climb_collision.image_index == 1) {
-			// Climbing to the left
-			grab_direction = -1;
-		} else if (_climb_collision.image_index == 2) {
-			// Climbing to the right
-			grab_direction = 1;
-		}
-		
-		// Determine the position that the player should start their grab from
-		start_x = _climb_collision.x+8 + 2*grab_direction;
-		start_y = _climb_collision.y+8 + 2;
-		
-		state_switch("Grab");
-		
-	} else if ((_wall_collision_left || _wall_collision_right) && !_ground_collision) {
-		state_switch("Wallclimb");
-		
-		if _wall_collision_left {
-			jump_direction = pi/4;
-			wallclimb_direction = -1;
-		} else {
-			jump_direction = 3*pi/4;
-			wallclimb_direction = 1;
-		}
-	}
+	// In the LUMI code, there is no change of state that occurs.
 }
