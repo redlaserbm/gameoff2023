@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "spr_player_jump",
   "bbox_bottom": 39,
-  "bbox_left": 14,
+  "bbox_left": 16,
   "bbox_right": 31,
   "bbox_top": 10,
   "bboxMode": 2,

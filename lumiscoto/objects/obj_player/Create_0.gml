@@ -1,5 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Initialization
+depth = -1;
 
 // Influences how fast the player gets up to top speed and stops from top speed
 move_accel = 0.4;
@@ -32,12 +32,16 @@ wallclimb_time = 0;
 wallclimb_direction = 1;
 
 // Angle that the player will jump at, in radians...
+// Depending on the movement mode, this angle may change!
 jump_direction = pi/2;
+
+// Variable to measure whether a jump is active or not
+jump_active = false;
 
 // Measures how long the player has spent in the air
 air_time = 0;
 
-// When the climbing animation starts, we use these variables to define where the player should begin climbing from
+// When the grabbing animation starts, we use these variables to define where the player should begin climbing from
 start_x = x;
 start_y = y;
 
@@ -51,4 +55,21 @@ jump_stopped = false;
 
 colliding = false;
 
+// Move inputs...
+move_input = false;
+up_input = false;
+jump = false;
+hold_space = false;
+jump_release = false;
+
+// Setup machine state for the player
+state_machine_init();
+
+// Define the states that the player will use during the game and scripts associated with each state
+state_create("Normal", ps_normal);
+state_create("Grab", ps_grab);
+state_create("Wallclimb", ps_wallclimb);
+
+//Set the default state
+state_init("Normal");
 
