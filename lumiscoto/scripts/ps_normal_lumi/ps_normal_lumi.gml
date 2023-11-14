@@ -135,7 +135,7 @@ function ps_normal_lumi() {
 	if (air_time < 2) { 
 		// Yes, they are... 
 		if move_x == 0 {
-			sprite_index = spr_player_idle;   
+			sprite_index = spr_lumi_idle;   
 		} else {
 			if walk {
 				sprite_index = spr_player_walk;	

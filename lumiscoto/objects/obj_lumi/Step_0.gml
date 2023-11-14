@@ -17,7 +17,7 @@ if on_the_ground {
 	x_distance_to_player = obj_player.x - obj_lumi.x;
 }
 
-if abs(x_distance_to_player) > 16 {
+if abs(x_distance_to_player) > 24 {
 	//Is the player to our left or our right?
 	if x_distance_to_player > 0 {
 		// The player is to the RIGHT of Lumi	
@@ -31,7 +31,7 @@ if abs(x_distance_to_player) > 16 {
 };
 
 // Should Lumi walk or run?
-if abs(x_distance_to_player) > 32 {
+if abs(x_distance_to_player) > 48 {
 	walk = false;	
 } else {
 	walk = true;	
