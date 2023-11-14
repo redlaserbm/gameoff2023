@@ -10,6 +10,7 @@
     {"name":"place_meeting_rounded","order":2,"path":"scripts/place_meeting_rounded/place_meeting_rounded.yy",},
     {"name":"obj_jump","order":2,"path":"objects/obj_jump/obj_jump.yy",},
     {"name":"ps_normal_lumi","order":3,"path":"scripts/ps_normal_lumi/ps_normal_lumi.yy",},
+    {"name":"rm_bonzai","order":1,"path":"rooms/rm_bonzai/rm_bonzai.yy",},
     {"name":"state_update","order":7,"path":"scripts/state_update/state_update.yy",},
     {"name":"state_create","order":1,"path":"scripts/state_create/state_create.yy",},
     {"name":"position_meeting_rounded","order":3,"path":"scripts/position_meeting_rounded/position_meeting_rounded.yy",},

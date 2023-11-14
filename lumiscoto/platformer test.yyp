@@ -57,6 +57,7 @@
     {"id":{"name":"spr_player_wallslide","path":"sprites/spr_player_wallslide/spr_player_wallslide.yy",},},
     {"id":{"name":"spr_player_run","path":"sprites/spr_player_run/spr_player_run.yy",},},
     {"id":{"name":"ps_wallclimb","path":"scripts/ps_wallclimb/ps_wallclimb.yy",},},
+    {"id":{"name":"rm_bonzai","path":"rooms/rm_bonzai/rm_bonzai.yy",},},
     {"id":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
     {"id":{"name":"spr_backgrounds","path":"sprites/spr_backgrounds/spr_backgrounds.yy",},},
     {"id":{"name":"state_update","path":"scripts/state_update/state_update.yy",},},
@@ -95,6 +96,7 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rm_bonzai","path":"rooms/rm_bonzai/rm_bonzai.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [
