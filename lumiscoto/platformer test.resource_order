@@ -22,7 +22,9 @@
     {"name":"draw_set_text_alignment","order":1,"path":"scripts/draw_set_text_alignment/draw_set_text_alignment.yy",},
     {"name":"state_test","order":8,"path":"scripts/state_test/state_test.yy",},
     {"name":"state_switch","order":5,"path":"scripts/state_switch/state_switch.yy",},
+    {"name":"spr_solitude","order":2,"path":"sprites/spr_solitude/spr_solitude.yy",},
     {"name":"obj_lumi","order":1,"path":"objects/obj_lumi/obj_lumi.yy",},
+    {"name":"obj_solitude","order":3,"path":"objects/obj_solitude/obj_solitude.yy",},
     {"name":"ps_normal","order":2,"path":"scripts/ps_normal/ps_normal.yy",},
   ],
 }
