@@ -4,23 +4,47 @@ depth = -16000;
 
 textbox_width = 32*23;
 textbox_height = 32*4;
-border = 32;
-line_sep = 32; // Admittedly I'm not sure how to set this number, this is just a good guess rn...
-line_width = textbox_width - 2*border;
 
-// Set the sprite to use for the textbook, as well as the image from that sprite to use and how fast it should animate...
-textbox_spr = spr_textbox;
+// Unlike in that tutorial, we need separate variables for the x and y borders
+text_border_x = 48;
+text_border_y = 44;
+
+portrait_border_x = 32;
+portrait_border_y = 8;
+
+// This is so that we don't try to draw the text on top of the portrait
+portrait_width = 128;
+
+line_sep = 32; // Admittedly I'm not sure how to set this number, this is just a good guess rn...
+line_width = textbox_width - text_border_x - text_border_y - portrait_width;
+
+// Set the sprite to use for the textbox, as well as the image from that sprite to use and how fast it should animate...
+textbox_spr = spr_textbox_back;
 textbox_img = 0;
 textbox_img_speed = 6/60;
 
 textbox_spr_w = 0;
 textbox_spr_h = 0;
 
+// Set the sprite to use for the textbox portrait
+portrait_spr = spr_portrait_scoto;
+
 // the text
 page = 0;
 page_number = 0;
+
+// This is the text the textbox will use
 text[0] = "The pathway you seek is a pathway that no longer exists.";
-text[1] = "Please heed my words. I speak my sayings with full conviction, traveler.";
+text[1] = "Please heed my words. I speak my sayings with full conviction.";
+
+// LASER NOTE: I'll try to implement the below so I only need to designate the portrait and emotion sprites when they need to change!
+
+// This is an array containing the portrait sprites to be used for each given line of text above
+portrait[0] = spr_portrait_scoto;
+
+// This array contains the image_index within each sprite that should be used for the given portrait sprite
+portrait_image[0] = 0;
+
 text_length[0] = string_length(text[0]);
 draw_char = 0;
 
