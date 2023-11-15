@@ -21,6 +21,10 @@ function ps_normal() {
 	// Is the player in contact with a wall (for the purposes of wall climbing?)
 	var _wall_collision_left = instance_place(x - 2 ,y, obj_wallclimb);
 	var _wall_collision_right = instance_place(x + 2 ,y, obj_wallclimb);
+	
+	// Is the player in contact with a wall (for the purposes of speed checking?)
+	var _normal_collision_left = instance_place(x - 2 ,y - 1, [obj_collision, obj_wallclimb]);
+	var _normal_collision_right = instance_place(x + 2 ,y - 1, [obj_collision, obj_wallclimb]);
 
 	// COMPUTE X-SPEED
 	
@@ -59,6 +63,12 @@ function ps_normal() {
 		move_x = clamp(move_x, -_max_speed, 0);
 	}
 	
+	if _normal_collision_left {
+		move_x = clamp(move_x, 0, _max_speed);	
+	}
+	if _normal_collision_right {
+		move_x = clamp(move_x, -_max_speed, 0);	
+	}
 	
 	// GRAVITY
 	

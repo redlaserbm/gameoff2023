@@ -67,6 +67,9 @@ hold_space = false;
 jump_release = false;
 walk = false;
 
+// Is the player dead?
+player_died = false;
+
 // Setup machine state for the player
 state_machine_init();
 

@@ -19,3 +19,9 @@ if move_y > 0 {
 
 // Execute script code
 state_execute();
+
+// If the player falls out of the room, trigger a respawn
+if ((y > room_height) && (!player_died)) {
+	player_died = true;
+	alarm[0] = 60;	
+}
