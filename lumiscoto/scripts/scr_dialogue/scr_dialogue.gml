@@ -16,6 +16,7 @@ function scr_dialogue(_text_id){
 			// Branching dialogue
 			scr_option("Yes, I do.", "solitude_yes");
 			scr_option("No, I don't.", "solitude_no");
+			scr_option("Route deez nuts!", "solitude_long");
 			break;
 			
 			case "solitude_yes":
@@ -23,6 +24,9 @@ function scr_dialogue(_text_id){
 				break;
 			case "solitude_no":
 				scr_text("Such is the plight of all who find themselves in this predicament...");
+				break;
+			case "solitude_long":
+				scr_text("So you truly are a prankster. Your time in this world shall be short.");
 				break;
 	}
 }

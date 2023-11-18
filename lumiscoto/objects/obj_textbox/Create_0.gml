@@ -5,11 +5,23 @@ depth = -16000;
 textbox_width = 32*23;
 textbox_height = 32*4;
 
-// Unlike in that tutorial, we need separate variables for the x and y borders
-text_border_x = 48;
-text_border_y = 44;
+option_width = 0;
+option_height = 80;
 
-portrait_border_x = 32;
+// Unlike in that tutorial, we need separate variables for the x and y borders
+textbox_x_offset = 32;
+textbox_y_offset = 8;
+
+// When option prompts come up, where should the textbox that displays them be drawn?
+option_x_offset = 768;
+option_y_offset = 136;
+
+text_border_x = 8;
+text_border_y = 24;
+
+option_border_x = 24; // I get it, this is annoying, but I'm trying to make the display look nice, okay?
+
+portrait_border_x = 16;
 portrait_border_y = 8;
 
 // This is so that we don't try to draw the text on top of the portrait
@@ -23,11 +35,11 @@ textbox_spr = spr_textbox_back;
 textbox_img = 0;
 textbox_img_speed = 6/60;
 
-textbox_spr_w = 0;
-textbox_spr_h = 0;
+textbox_spr_w = sprite_get_width(textbox_spr);
+textbox_spr_h = sprite_get_height(textbox_spr);
 
 // Set the sprite to use for the textbox portrait
-portrait_spr = spr_portrait_scoto;
+portrait_spr = spr_portrait_solitude;
 
 // the text
 page = 0;
@@ -38,13 +50,12 @@ text[0] = "text";
 
 // Options
 option[0] = "Yes";
-option[1] = "No";
-
-option_link_id[0] = -1;
-option_link_id[1] = -1;
+option_link_id[0] = noone;
 
 option_pos = 0;
 option_number = 0;
+
+cursor_space = 0;
 
 // LASER NOTE: I'll try to implement the below so I only need to designate the portrait and emotion sprites when they need to change!
 
@@ -62,6 +73,7 @@ text_speed = 1;
 setup = false;
 
 accept_key = false;
+up_down_input = false;
 
 
 
