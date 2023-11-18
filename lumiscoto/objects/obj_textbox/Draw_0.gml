@@ -16,8 +16,6 @@ if !setup {
 	draw_set_valign(fa_top);
 	draw_set_halign(fa_left);
 	
-	page_number = array_length(text);
-	
 	for(var _p = 0; _p < page_number; _p++) {
 		
 		// Determine the length (in characters) of the text to be displayed for each page
@@ -51,6 +49,11 @@ if accept_key {
 			instance_destroy();
 		}
 	}
+}
+
+// Options
+if (page == page_number - 1) && (draw_char == text_length[page]) {
+	
 }
 
 // Draw the textbox

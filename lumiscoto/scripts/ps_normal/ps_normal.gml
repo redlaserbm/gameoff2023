@@ -129,13 +129,14 @@ function ps_normal() {
 		}
 	}
 	
+	// If a textbox is open, do *not* allow the player to move
+	if instance_number(obj_textbox) > 0 {
+		move_x = 0;
+		move_y = 0;
+	}
+	
 	// Move the player
 	var _arr = move_and_collide(move_x, move_y, obj_collision_parent, 4);
-
-	// Ensure that the player does not fall through objects while moving
-	//if (array_length(_arr) != 0 || place_meeting(x,y+move_y, obj_collision_parent)) {
-	//	move_y = 0;	
-	//} 
 	
 	// Display the appropriate sprite for the player 
 	if (move_x != 0) {

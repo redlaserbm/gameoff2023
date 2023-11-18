@@ -14,5 +14,8 @@ ctrl_mode[1] = "KEYS";
 // This variable controls the actual movement mode the player uses.
 ctrl_mode_index = 0;
 
+id_lumi = noone;
+id_scoto = noone;
 
+scr_find_lumiscoto();
 

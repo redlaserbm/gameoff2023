@@ -3,6 +3,8 @@
 var _zero_x = camera_get_view_x(view_camera[0]);
 var _zero_y = camera_get_view_y(view_camera[0]);
 
+draw_text(_zero_x, _zero_y, string(id_lumi));
+draw_text(_zero_x, _zero_y + 32, string(id_scoto));
 //draw_text(_zero_x, _zero_y, string(obj_player.move_x));
 //draw_text(_zero_x, _zero_y + 32, string(obj_player.move_x));
 //draw_text(_zero_x + 32, _zero_y + 32, string(obj_player.move_y));

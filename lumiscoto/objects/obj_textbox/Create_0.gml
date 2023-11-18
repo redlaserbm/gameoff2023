@@ -33,9 +33,18 @@ portrait_spr = spr_portrait_scoto;
 page = 0;
 page_number = 0;
 
-// This is the text the textbox will use
-text[0] = "The pathway you seek is a pathway that no longer exists.";
-text[1] = "Please heed my words. I speak my sayings with full conviction.";
+// LASER NOTE: When using scr_text, this line gets overwritten. It's just here so the compiler doesn't get mad at us.
+text[0] = "text";
+
+// Options
+option[0] = "Yes";
+option[1] = "No";
+
+option_link_id[0] = -1;
+option_link_id[1] = -1;
+
+option_pos = 0;
+option_number = 0;
 
 // LASER NOTE: I'll try to implement the below so I only need to designate the portrait and emotion sprites when they need to change!
 
