@@ -16,6 +16,6 @@ ctrl_mode_index = 0;
 
 id_lumi = noone;
 id_scoto = noone;
-
 scr_find_lumiscoto();
+
 

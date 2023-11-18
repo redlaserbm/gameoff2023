@@ -220,6 +220,7 @@
     {"name":"inst_65DE1B65","path":"rooms/rm_bonzai/rm_bonzai.yy",},
     {"name":"inst_12E2C9C4","path":"rooms/rm_bonzai/rm_bonzai.yy",},
     {"name":"inst_250D948A","path":"rooms/rm_bonzai/rm_bonzai.yy",},
+    {"name":"inst_488F93C4","path":"rooms/rm_bonzai/rm_bonzai.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -439,6 +440,7 @@
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":false,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2B58A52F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":576.0,"y":3136.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_488F93C4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_lumi","path":"objects/obj_lumi/obj_lumi.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":544.0,"y":3040.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles_1","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":200,"SerialiseWidth":50,"TileCompressedData":[
 -7800,-2147483648,-39,0,-11,-2147483648,-39,0,-11,-2147483648,-39,0,-11,-2147483648,-39,0,-11,-2147483648,-9,0,7,729,730,1493,1494,1494,720,721,-23,0,-11,-2147483648,-9,0,7,793,794,1557,1558,1558,784,785,-23,0,-11,-2147483648,-9,0,7,1307,
