@@ -10,6 +10,7 @@ var _textbox_y = camera_get_view_y(view_camera[0]);
 if !setup {
 	setup = true;
 	
+	// draw_set_font(global.font_main);
 	draw_set_font(global.font_main);
 	
 	cursor_space = string_width("> ");

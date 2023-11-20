@@ -3,20 +3,27 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "",
+    "activeFile": "LumiScoto_Mindy.tsx",
     "expandedProjectPaths": [
+        "."
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
+        "LumiScoto_Mindy.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
     },
     "last.imagePath": "D:/Programs/Github/gameoff2023/additional_assets",
     "map.height": 30,
     "map.tileHeight": 16,
     "map.tileWidth": 16,
     "openFiles": [
+        "LumiScoto_Mindy.tsx"
     ],
     "project": "lumiscoto_tileset.tiled-project",
     "recentFiles": [
+        "LumiScoto_Mindy.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {

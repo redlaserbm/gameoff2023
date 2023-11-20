@@ -75,8 +75,12 @@ setup = false;
 accept_key = false;
 up_down_input = false;
 
-
-
+//font_to_test[0] = fnt_dpcomic;
+//font_to_test[1] = fnt_lunchtime;
+//font_to_test[2] = fnt_manaspace;
+//font_to_test[3] = fnt_wildwords;
+//font_to_test[4] = fnt_yosterisland;
+//font_to_display = 0;
 
 
 
