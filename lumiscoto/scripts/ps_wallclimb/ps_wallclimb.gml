@@ -47,6 +47,7 @@ function ps_wallclimb() {
 	
 	// Which sprites should the player use?
 	sprite_index = spr_player_wallland;
+	image_xscale = sign(wallclimb_direction);
 	if state_timer < 2 {
 		image_index = 0;
 		sprite_set_speed(spr_player_wallland, 30, spritespeed_framespersecond);
