@@ -49,6 +49,7 @@
     {"name":"spr_lumi_idle","order":3,"path":"sprites/spr_lumi_idle/spr_lumi_idle.yy",},
     {"name":"state_switch","order":5,"path":"scripts/state_switch/state_switch.yy",},
     {"name":"obj_camera","order":7,"path":"objects/obj_camera/obj_camera.yy",},
+    {"name":"rm_jumps","order":5,"path":"rooms/rm_jumps/rm_jumps.yy",},
     {"name":"obj_death","order":5,"path":"objects/obj_death/obj_death.yy",},
     {"name":"rm_textbox_test","order":2,"path":"rooms/rm_textbox_test/rm_textbox_test.yy",},
     {"name":"spr_solitude","order":2,"path":"sprites/spr_solitude/spr_solitude.yy",},

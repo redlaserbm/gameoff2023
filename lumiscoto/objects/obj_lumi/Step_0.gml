@@ -14,7 +14,7 @@ jump_release = 0;
 
 if on_the_ground {
 	// Don't update this variable unless lumi is on the ground
-	x_distance_to_player = obj_player.x - obj_lumi.x;
+	x_distance_to_player = obj_game.id_scoto.x - x;
 }
 
 if abs(x_distance_to_player) > 24 {
