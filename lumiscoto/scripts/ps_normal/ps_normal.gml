@@ -13,7 +13,7 @@ function ps_normal() {
 	var _ground_collision = place_meeting(x,y + 2, obj_collision_parent);
 
 	// Has the player hit their head?
-	var _roof_collision = place_meeting(x,y - 2, obj_collision_parent);
+	var _roof_collision = place_meeting(x,y - 2, obj_collision);
 	
 	// Is the player able to grab onto a ledge?
 	var _climb_collision = instance_place(x,y, obj_climb);
@@ -72,7 +72,7 @@ function ps_normal() {
 	
 	// GRAVITY
 	
-	if _ground_collision {
+	if _ground_collision && move_y >= 0 {
 		
 		// If the player is on flat ground, we want their next jump to be straight up
 		jump_direction = pi/2;
@@ -83,7 +83,7 @@ function ps_normal() {
 		
 	} else {
 		// If the player is NOT on flat ground, bring them down with gravity
-		move_y += grav;
+		move_y = move_y + grav;
 		
 		// The player is obviously in the air at this point
 		air_time += 1;
@@ -124,7 +124,7 @@ function ps_normal() {
 	
 	// If the player is travelling on a slope, ensure that they "adhere" to that slope
 	if (place_meeting(x, y + slope_max, obj_collision_slope) && (move_y >= 0)) {
-		while !place_meeting(x,y+1, obj_collision_parent) {
+		while !place_meeting(x,y+1, [obj_collision, obj_collision_slope, obj_wallclimb]) {
 			y = y+1;	
 		}
 	}
@@ -136,8 +136,14 @@ function ps_normal() {
 	}
 	
 	// Move the player
-	var _arr = move_and_collide(move_x, move_y, obj_collision_parent, 4);
+	if move_y >= 0 {
+		var _arr = move_and_collide(move_x, move_y, [obj_collision, obj_collision_slope, obj_wallclimb], 4);
+	} else {
+		x += move_x;
+		y += move_y;
+	}
 	
+
 	// Display the appropriate sprite for the player 
 	if (move_x != 0) {
 		image_xscale = sign(move_x);
